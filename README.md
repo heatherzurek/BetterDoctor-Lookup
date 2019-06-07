@@ -1,6 +1,6 @@
 # _BetterDoctor Lookup_
 
-#### _This application uses the BetterDoctor API to make it easier for you to find a doctor to match your medical needs in Portland, Oregon. _
+## _This application uses the BetterDoctor API to make it easier for you to find a doctor to match your medical needs in Portland, Oregon. _
 
 #### By _**Heather Zurek**_
 
