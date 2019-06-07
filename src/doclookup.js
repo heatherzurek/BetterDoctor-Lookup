@@ -1,8 +1,10 @@
 export class DoctorLookup {
+
   getDoctorByNeed(need) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=10&user_key=5b8d5c297437183f09ad9bf3a1640b7e`;
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?location=or-portland&user_location=45.520%2C-122.677&skip=0&limit=10&user_key=${process.env.exports.apiKey}&${key}=${search}`;
+'
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);
