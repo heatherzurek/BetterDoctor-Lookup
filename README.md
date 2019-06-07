@@ -19,7 +19,7 @@ _No Known Bugs🐛🐞_
 
 ## Support and contact details
 
-_If you have any questions or concerns please contact us at Heather.Zurek@Gmail.com_
+_If you have any questions or concerns please contact me at Heather.Zurek@Gmail.com_
 
 ## Technologies Used
 
