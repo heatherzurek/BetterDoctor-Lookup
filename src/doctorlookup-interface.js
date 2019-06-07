@@ -1,3 +1,9 @@
+import { DoctorLookup } from './doclookup.js';
+import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
+
 $(document).ready(function() {
   $('#doctorLookup').click(function() {
     let city = $('#medicalNeed').val();
@@ -9,7 +15,7 @@ $(document).ready(function() {
 
     promise.then(function(response) {
       body = JSON.parse(response);
-      $('.showDoctor').text(`Name: ${city} is ${body.main.humidity}%`);
+      $('.showDoctor').text(`Name: ${name}`);
 
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
