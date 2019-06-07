@@ -1,15 +1,29 @@
-<html>
-  <head>
-    <title>Weather</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Doctor lookup</h1>
-      <label for="issue">Enter a issue:</label>
-      <input id="issue" type="text">
-      <button class="btn-success" id="doctorLookup">View Doctors</button>
-      <div class="errors"></div>
-      <div class="showDoctors"></div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Doctor Looker-Upper!</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Welcome to ze Doctor Looker-Upper!</h2>
     </div>
-  </body>
+    <h4>Search by Doctor name, medical issue or both:</h4>
+    <form id="drSearch" method="post">
+      <label for="drname">Dr. name:</label><br>
+      <input id="drname" type="text" name="drname">
+      <br>
+      <label for="medissue">Medical issue:</label><br>
+      <input id="medissue" type="text" name="medissue">
+      <br>
+      <button type="submit" name="button" class="btn btn-dark">SEARCH</button>
+    </form>
+    <br>
+
+    <div id="showDrs"></div>
+    <div id="error"></div>
+
+  </div>
+</body>
 </html>
