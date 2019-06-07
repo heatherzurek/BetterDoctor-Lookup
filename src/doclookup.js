@@ -1,8 +1,8 @@
 export class DoctorLookup {
-  getDoctorByNeed(city) {
+  getDoctorByNeed(need) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5b8d5c297437183f09ad9bf3a1640b7e`;
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=10&user_key=5b8d5c297437183f09ad9bf3a1640b7e`;
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);
