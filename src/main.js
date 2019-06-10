@@ -20,7 +20,9 @@ $(document).ready(function() {
       if(body.data.length === 0) {
         $('#showDoctors').text(`There are no doctors in your area that match your search parameters.`)
       }
-  });
+    });
 
+  });
 });
-});
+
+//promise is undefined.. and myu styles.css isn't showing up when I run start
