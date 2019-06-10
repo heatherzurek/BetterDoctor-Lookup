@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/main.js',
@@ -14,42 +15,32 @@ module.exports = {
     contentBase: './dist'
   },
   plugins: [
-    new UglifyJsPlugin({ sourceMap: true }),    new CleanWebpackPlugin(['dist']),
+    new UglifyJsPlugin({ sourceMap: true }),
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Ping Pong',
+      title: 'PD(r)X',
       template: './src/index.html',
       inject: 'body'
-    })
+    }),
+    new Dotenv()
   ],
   module: {
-      rules: [
-        {
-          test: /\.css$/,
-          use: [
-            'style-loader',
-            'css-loader'
-          ]
-        },
-          {
-          test: /\.js$/,
-          exclude: [
-            /node_modules/,
-            /spec/
-          ],
-          loader: "eslint-loader"
-       },
-       // new rule
-       {
-         test: /\.js$/,
-         exclude: [
-           /node_modules/,
-           /spec/
-         ],
-         loader: "babel-loader",
-         options: {
-           presets: ['es2015']
-         }
-       }
-     ]
-   }
- };
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.js$/,
+        exclude: [
+        /node_modules/,
+        /spec/
+      ],
+        loader: "eslint-loader"
+      }
+    ]
+  }
+};
