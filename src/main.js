@@ -36,8 +36,6 @@ $(document).ready(function() {
 
         $('#showDoctors').append(`<strong>Name:</strong>
           ${data.profile.first_name} ${data.profile.last_name}<br>
-          <strong>Bio:</strong>
-          ${data.profile.bio}<br>
           <strong>Specialties:</strong>
           ${data.specialties[0].name}<br>
           <strong>Address:</strong>
@@ -50,7 +48,9 @@ $(document).ready(function() {
           <strong>Website:</strong>
           ${website}<br>
           <strong>Accepts New Patients:</strong>
-          ${newPatients}<br><hr>`);
+          ${newPatients}<br>
+          <strong>Bio:</strong>
+          ${data.profile.bio}<br><hr>`);
       },
 
       function (error) {

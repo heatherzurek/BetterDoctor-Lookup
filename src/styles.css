@@ -1,7 +1,17 @@
 body {
   background-color: darkgrey;
+  font-family: sans-serif;
 }
 
 strong {
- color: yellow;
+ color: darkorange;
+}
+
+.container {
+  padding: 20px;
+  background-color: white;
+}
+
+form {
+   text-align: center;
 }

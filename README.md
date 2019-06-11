@@ -1,6 +1,6 @@
 # _BetterDoctor Lookup_
 
-## _This application uses the BetterDoctor API to make it easier for you to find a doctor to match your medical needs in Portland, Oregon. _
+## _This application uses the BetterDoctor API to make it easier for you to find a doctor to match your medical needs in Portland, Oregon._
 
 #### By _**Heather Zurek**_
 
@@ -12,6 +12,11 @@
 | User enters a name to receive a list of doctors in the area" | "Dr. Smith" | "Dr. A Smith, Dr. B Smith, Dr. C Smith" |
 | If the users search doesn't match any doctors it should return a response | "Fake Medical Disease" | "Sorry, no doctors meet the search criteria" |
 
+## Installation and Setup
+* `$ git clone https://github.com/YourGitHubNameHere/YourGitHubRepositoryNameHere.git` This will clone the repository to your local machine.
+* `$ npm install` This will allow you to have access to the CLI (command line interface) for webpack.
+* `$ npm run start`
+This will watch the file changes in `./src` and automatically build the bundle with dev build (not minified). This is a continuous monitoring which can be stopped with the key combination `Ctrl + C` within the terminal.
 
 ## Known Bugs
 
@@ -23,7 +28,7 @@ _If you have any questions or concerns please contact me at Heather.Zurek@Gmail.
 
 ## Technologies Used
 
-_JavaScript, Webpack, Karma, Jasmine and BetterDoctor API_
+_JavaScript, NodeJS, Webpack, Karma, Jasmine and BetterDoctor API_
 
 ### License
 
