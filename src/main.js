@@ -20,13 +20,35 @@ $(document).ready(function() {
         $('#showDoctors').text("There are no doctors in your area that match your search.");
       }
       body.data.forEach(function (data) {
-        console.log(data.practices[0].visit_address.city);
-        $('#showDoctors').append(`<strong>Name:</strong> ${data.profile.first_name} ${data.profile.last_name}<br> <strong>Bio:</strong> ${data.profile.bio}<br> <strong>Specialties:</strong> ${data.specialties[0].name}<br><br>
+        let website = "";
+        if (data.practices[0].website === undefined) {
+          website = 'No website available';
+        }
+
+        let newPatients = "";
+        if (data.practices[0].accepts_new_patients === true){
+          newPatients = 'Yes';
+        } else {
+          newPatients = 'No';
+        }
+
+        $('#showDoctors').append(`<strong>Name:</strong>
+          ${data.profile.first_name} ${data.profile.last_name}<br>
+          <strong>Bio:</strong>
+          ${data.profile.bio}<br>
+          <strong>Specialties:</strong>
+          ${data.specialties[0].name}<br>
           <strong>Address:</strong>
           ${data.practices[0].visit_address.street}
           ${data.practices[0].visit_address.city},
           ${data.practices[0].visit_address.state}
-          ${data.practices[0].visit_address.zip}<br><br>`);
+          ${data.practices[0].visit_address.zip}<br>
+          <strong>Phone Number:</strong>
+          ${data.practices[0].phones[0].number}<br>
+          <strong>Website:</strong>
+          ${website}<br>
+          <strong>Accepts New Patients:</strong>
+          ${newPatients}<br><hr>`);
       },
 
       function (error) {
