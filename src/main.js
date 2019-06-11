@@ -35,9 +35,9 @@ $(document).ready(function() {
         }
 
         $('#showDoctors').append(`<strong>Name:</strong>
-          ${data.profile.first_name} ${data.profile.last_name}<br>
+          ${data.profile.first_name} ${data.profile.last_name}, ${data.profile.title}<br>
           <strong>Specialties:</strong>
-          ${data.specialties[0].name}<br>
+          ${data.specialties[0].name}, ${data.specialties[0].description} <br>
           <strong>Address:</strong>
           ${data.practices[0].visit_address.street}
           ${data.practices[0].visit_address.city},
@@ -48,7 +48,7 @@ $(document).ready(function() {
           <strong>Website:</strong>
           ${website}<br>
           <strong>Accepts New Patients:</strong>
-          ${newPatients}<br>
+          ${newPatients}<br><br>
           <strong>Bio:</strong>
           ${data.profile.bio}<br><hr>`);
       },
