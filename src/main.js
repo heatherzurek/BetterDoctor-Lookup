@@ -10,9 +10,11 @@ $(document).ready(function() {
     $('#showDoctors').text("");
     let doctorName = $('#drname').val();
     $('#drname').val("");
+    let medicalNeed = $('#specialties').val();
+    $('#specialties').val("");
 
     let doctorLookup = new DoctorLookup();
-    let promise = doctorLookup.findDoctor(doctorName);
+    let promise = doctorLookup.findDoctor(doctorName, medicalNeed);
 
     promise.then(function(response) {
       let body = JSON.parse(response);
