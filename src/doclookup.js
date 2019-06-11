@@ -1,5 +1,4 @@
-export class DoctorLookup
-{
+export class DoctorLookup {
   findDoctor(doctorName){
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
@@ -15,5 +14,4 @@ export class DoctorLookup
       request.send();
     });
   }
-
 }
