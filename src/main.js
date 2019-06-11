@@ -16,9 +16,8 @@ $(document).ready(function() {
 
     promise.then(function(response) {
       let body = JSON.parse(response);
-      //why is body undefined???
       if(body.data.length === 0) {
-        $('#showDoctors').text(`There are no doctors in your area that match your search parameters.`);
+        $('#showDoctors').text("There are no doctors in your area that match your search parameters.");
       }
     });
 
