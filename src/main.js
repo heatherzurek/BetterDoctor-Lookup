@@ -22,7 +22,8 @@ $(document).ready(function() {
       body.data.forEach(function (data) {
         console.log(data.profile.first_name);
         console.log(data.profile.last_name);
-        $('#showDoctors').append(`${data.profile.first_name} ${data.profile.last_name}<br>`);
+        console.log(data.specialties[0].name);
+        $('#showDoctors').append(`<strong>Name:</strong> ${data.profile.first_name} ${data.profile.last_name}<br> <strong>Bio:</strong> ${data.profile.bio}<br> Specialties: ${data.specialties[0].name}`);
       },
 
       function (error) {
