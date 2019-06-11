@@ -34,7 +34,8 @@ $(document).ready(function() {
           newPatients = 'No';
         }
 
-        $('#showDoctors').append(`<strong>Name:</strong>
+        $('#showDoctors').append(`<img src="${data.profile.image_url}">
+          <strong>Name:</strong>
           ${data.profile.first_name} ${data.profile.last_name}, ${data.profile.title}<br>
           <strong>Specialties:</strong>
           ${data.specialties[0].name}, ${data.specialties[0].description} <br>

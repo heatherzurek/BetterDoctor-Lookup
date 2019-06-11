@@ -15,3 +15,7 @@ strong {
 form {
    text-align: center;
 }
+
+img {
+  float: right;
+}
