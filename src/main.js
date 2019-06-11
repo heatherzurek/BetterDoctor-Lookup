@@ -20,10 +20,13 @@ $(document).ready(function() {
         $('#showDoctors').text("There are no doctors in your area that match your search.");
       }
       body.data.forEach(function (data) {
-        console.log(data.profile.first_name);
-        console.log(data.profile.last_name);
-        console.log(data.specialties[0].name);
-        $('#showDoctors').append(`<strong>Name:</strong> ${data.profile.first_name} ${data.profile.last_name}<br> <strong>Bio:</strong> ${data.profile.bio}<br> Specialties: ${data.specialties[0].name}`);
+        console.log(data.practices[0].visit_address.city);
+        $('#showDoctors').append(`<strong>Name:</strong> ${data.profile.first_name} ${data.profile.last_name}<br> <strong>Bio:</strong> ${data.profile.bio}<br> <strong>Specialties:</strong> ${data.specialties[0].name}<br><br>
+          <strong>Address:</strong>
+          ${data.practices[0].visit_address.street}
+          ${data.practices[0].visit_address.city},
+          ${data.practices[0].visit_address.state}
+          ${data.practices[0].visit_address.zip}<br><br>`);
       },
 
       function (error) {
