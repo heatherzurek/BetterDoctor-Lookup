@@ -13,7 +13,7 @@
 | If the users search doesn't match any doctors it should return a response | "Fake Medical Disease" | "Sorry, no doctors meet the search criteria" |
 
 ## Installation and Setup
-* `$ git clone https://github.com/YourGitHubNameHere/YourGitHubRepositoryNameHere.git` This will clone the repository to your local machine.
+* `$ git clone https://github.com/heatherzurek/Doctor-lookup.git` This will clone the repository to your local machine.
 * `$ npm install` This will allow you to have access to the CLI (command line interface) for webpack.
 * `$ npm run start`
 This will watch the file changes in `./src` and automatically build the bundle with dev build (not minified). This is a continuous monitoring which can be stopped with the key combination `Ctrl + C` within the terminal.
